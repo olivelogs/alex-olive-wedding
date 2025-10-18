@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Names — Wedding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fffdf8;
+      --ink: #222222;
+      --muted: #5b5b5b;
+      --accent: #8a9280; /* sage */
+      --accent-2: #c6b8a0; /* warm taupe */
+      --card: #ffffff;
+      --ring: #e6e0d4;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; }
+    header { position: sticky; top: 0; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 85%, white); border-bottom: 1px solid var(--ring); z-index: 20; }
+    .nav { max-width: 980px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: .75rem 1rem; }
+    .brand { font-family: "Playfair Display", Georgia, serif; letter-spacing: .03em; font-weight: 600; }
+    nav a { text-decoration: none; color: var(--muted); margin-left: 1rem; font-weight: 500; }
+    nav a:hover { color: var(--ink); }
+
+    .hero { max-width: 980px; margin: 0 auto; padding: 5rem 1rem 3rem; text-align: center; }
+    .hero h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: clamp(2.2rem, 5vw, 4rem); letter-spacing: .01em; margin: 0 0 .5rem; }
+    .hero .date { color: var(--muted); font-weight: 500; }
+    .hero .cta { margin-top: 1.5rem; display: inline-flex; gap: .75rem; flex-wrap: wrap; justify-content: center; }
+    .btn { background: var(--accent); color: white; border: none; padding: .75rem 1rem; border-radius: 999px; text-decoration: none; font-weight: 600; }
+    .btn.secondary { background: var(--accent-2); }
+
+    .section { max-width: 980px; margin: 0 auto; padding: 3rem 1rem; }
+    .card { background: var(--card); border: 1px solid var(--ring); border-radius: 16px; padding: 1.25rem; box-shadow: 0 1px 0 rgba(0,0,0,.02); }
+    .grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 800px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+    h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: clamp(1.4rem, 3vw, 2rem); margin: 0 0 1rem; }
+    h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; margin: .5rem 0; font-size: 1.2rem; }
+    .muted { color: var(--muted); }
+    ul { padding-left: 1.1rem; }
+    li { margin: .35rem 0; }
+    .divider { height: 1px; background: var(--ring); margin: 2rem auto; max-width: 860px; }
+
+    footer { padding: 3rem 1rem 4rem; text-align: center; color: var(--muted); }
+
+    /* Print-friendly basics */
+    @media print {
+      header, .hero .cta a.btn.secondary { display: none; }
+      .card { border: 1px solid #ddd; box-shadow: none; }
+      a::after { content: " (" attr(href) ")"; font-size: 90%; }
+    }
+
+    /* Optional QR block styling */
+    .qr { display: inline-block; padding: .75rem; border: 1px solid var(--ring); border-radius: 12px; background: white; }
+    .qr small { display: block; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">Alex & Olive</div>
+      <nav>
+        <a href="#details">Details</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#travel">Travel</a>
+        <a href="#registry">Registry</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Alex Nelson & Olive LoGrasso</h1>
+      <div class="date">Wedding • June 13, 2026 • Champaign, Illinois</div>
+      <div class="cta">
+        <a class="btn" href="#rsvp">RSVP</a>
+        <a class="btn secondary" href="#registry">Registry</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="details" class="section">
+      <div class="grid two">
+        <div class="card">
+          <h2>Venue</h2>
+          <p><strong>Location:</strong> Prairie Fruits & Farm Creamery, 4410 N. Lincoln Ave, Champaign, IL</p>
+          <p><strong>Ceremony:</strong> Lake at Prairie Fruits & Farm</p> 
+          <p><strong>Reception:</strong> Caprae Restaurant (on site)</p>
+          <p class="muted">Outdoor ceremony, dinner indoors. Garden party attire. Bring layers for evening chill. Be prepared to meet some goats.</p>
+        </div>
+        <div class="card">
+          <h2>Our Story</h2>
+          <p>We met in the Colorado State University Plant Diagnostic Clinic in 2022, and now we're getting married. It's really cute.</p>
+          <p>In 2023 we met in the CSU Plant Diagnostic Clinic, and became fast friends.</p>
+          <p>Life threw trials at both of us. Shortly after Alex moved into a new apartment, there was a gas leak and the hot water was shut off. 
+            Olive graciously allowed Alex to stay at their place while maintenance took their sweet time to get things fixed. 
+            Eventually the gas leak was sealed and the hot water was turned back on, but Alex never left Olive’s apartment.  
+            The rest was history. We learned we lived well together. We worked well together, laughed together, and understood each other. 
+            We had a son. His name is Fish. He was, and still is, a trial in his own right.</p>
+          <p>As we were planning to upgrade our apartment, we had an idea: <em>move across the country.</em> So that’s what we did. 
+            And it occurred to us that when someone makes a <em>move across the country</em> easier, not harder, you’ve probably found a keeper. 
+            We had more life trials, including a daughter named Bug. Alex got laid off, then started a business. Olive broke their back. 
+            The cats got Giardia. And we’ve loved each other through all of it. Our garden grows better together!</p>
+          <p>We’re really excited to have our wedding at Prairie Fruits & Farm Creamery - when we first visited Champaign-Urbana to scope out apartments, 
+            this is where the decision to move here was made. We’ve since visited there many times, and are thrilled to have you all there.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section">
+      <div class="card">
+        <h2>Schedule</h2>
+        <ul>
+          <li><strong>3:00 pm</strong> — Arrive</li>
+          <li><strong>4:00 pm</strong> — Ceremony</li>
+          <li><strong>5:00 pm</strong> — Cocktail hour</li>
+          <li><strong>6:00 pm</strong> — Dinner & toasts</li>
+          <li><strong>8:00 pm</strong> — Dancing</li>
+          <li><strong>9:00 pm</strong> — Bonfire</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="travel" class="section">
+      <div class="grid two">
+        <div class="card">
+          <h2>Travel & Stay</h2>
+          <p><strong>Nearest airport:</strong> University of Illinois Willard Airport is in town. Chicago O'Hare.</p>
+          <p><strong>Hotel block:</strong> TBD — mention “LoGrasso-Nelson Wedding” for rate.</p>
+          <p><strong>Parking:</strong> On‑site, free</p>
+        </div>
+        <div class="card">
+          <h2>FAQ</h2>
+          <h3>Can I bring a plus‑one?</h3>
+          <p class="muted">Only if named on your invite. We love you anyway.</p>
+          <h3>Kids?</h3>
+          <p class="muted">We'll make sure they get a mocktail. Must like goats and s'mores.</p>
+          <h3>Dietary needs</h3>
+          <p class="muted">Tell us on the RSVP and we’ll make it work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="registry" class="section">
+      <div class="card">
+        <h2>Registry</h2>
+        <p>Link your registry here, or a cash fund link.</p>
+        <ul>
+          <li><a href="#">Zola</a></li>
+          <li><a href="#">Honeyfund</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section">
+      <div class="card">
+        <h2>RSVP</h2>
+        <p>Embed a simple form service here (Google Form, Tally, Typeform) or link out to your RSVP platform.</p>
+        <p><a class="btn" href="#">Open RSVP Form</a></p>
+        <div style="margin-top:1rem; text-align:center">
+          <!-- Optional: drop in a QR image file named qr.png next to this HTML file -->
+          <figure class="qr">
+            <img src="qr.png" alt="QR code to RSVP" width="160" height="160" />
+            <small>Scan to RSVP</small>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Your Names — We’re getting married. Be nice.</p>
+  </footer>
+</body>
+</html>
