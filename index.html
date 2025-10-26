@@ -52,6 +52,21 @@
 
     footer { padding: 3rem 1rem 4rem; text-align: center; color: var(--muted); }
 
+
+    /*@keyframes fadeIn { 
+    /*  from {opacity: 0; }
+    /*  to { opacity: 1; }
+    /*}
+
+    /*.hero { animation: fadeIn 1s ease-out forwards; }
+    /*.coreopsis { animation: fadeIn 1.2s ease-out forwards; }
+    /*.spiderwort { animation: fadeIn 1.2s ease-out forwards; }
+
+    /*.hero { animation-delay: 1s; }
+    /*.coreopsis { animation-delay: 0.2s; }
+    /*.spiderwort { animation-delay: 0.2s; }
+
+
     /* Print-friendly basics */
     @media print {
       header, .hero .cta a.btn.secondary { display: none; }
@@ -199,5 +214,16 @@
   <footer>
     <p>© Alex & Olive — We’re getting married. Be nice.</p>
   </footer>
+
+  <!-- <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    sections.forEach(section => observer.observe(section));
+  </script> -->
+
 </body>
 </html>
